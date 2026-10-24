@@ -1,7 +1,11 @@
 # K86 Studio
 
 Native Linux configurator for the Attack Shark K86 (YC3121, `3151:4015`).
-It replaces the bundled Electron app and is built in Rust/egui, styled after ArtCraft Launcher.
+
+Attack Shark only ships a Windows configurator (`ATTACK SHARK K86 SOFT.exe`, an Electron app), and there is no native one for Linux.
+This project started as a port of that Windows app: its HID protocol was carried over and rebuilt in Rust/egui, styled after ArtCraft Launcher.
+
+![Keys page](docs/screenshots/keys.png)
 
 ## Build and run
 
@@ -22,6 +26,18 @@ Then replug the keyboard.
 - **Screen:** 240×135 image or GIF editor, writes to slots 1–5 or as an animation, clock sync, clear screen.
 - **Settings:** debounce, sleep timers, factory reset, start on boot, close to tray.
 - **Firmware:** online check against the vendor server, then install. Untested on hardware; see the notes in `src/firmware.rs`.
+
+## Screenshots
+
+| Lighting | Macros |
+| --- | --- |
+| ![Lighting](docs/screenshots/lighting.png) | ![Macros](docs/screenshots/macros.png) |
+| **Screen** | **Settings** |
+| ![Screen](docs/screenshots/screen.png) | ![Settings](docs/screenshots/settings.png) |
+| **Firmware** | |
+| ![Firmware](docs/screenshots/firmware.png) | |
+
+Open the app on a given page with `--page=keys|lighting|macros|screen|settings|firmware`.
 
 ## Tests
 
